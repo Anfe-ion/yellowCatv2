@@ -1,0 +1,23 @@
+<div class="body">
+    <div class="log-in">
+        <form action="">
+            <h3>Login Here</h3>
+            <label for="username">Username</label>
+            <input type="text" placeholder="Email or phone" #username>
+
+            <label for="username">Password</label>
+            <input type="password" placeholder="Password" #password>
+
+            <button (click)="login()">Log In</button>
+            <div class="social-log">
+                <button (click)="googleLogin()"><i class="bi bi-google"></i> Login with Google</button>
+                <button (click)="facebookLogin()"><i class="bi bi-facebook"></i> Login with Facebook</button>
+            </div>
+        </form>
+    </div>
+    <div class="register">  
+        <h3>Don't have an account?</h3>
+        <p>By registering at yellowCat you can receive discounts and great surprises</p> 
+        <button (click)="registerRedirection()">Register Now!</button>     
+    </div>
+</div>

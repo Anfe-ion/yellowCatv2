@@ -1,0 +1,6 @@
+@yellowCat_HostAddress = http://localhost:5146
+
+GET {{yellowCat_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

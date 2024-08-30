@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    background-color: black;
+    padding: 0.15em 0em 0.15em 0em;
+}
+
+.navBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+    align-items: center;
+    justify-self: center;
+    max-height: 55%;
+
+    i {
+        color: var(--golden-yellow);
+        font-size: 1.4em;
+        cursor: pointer;
+        background-color: inherit;
+    }
+
+    i:hover {
+        color: var(--electric-carrot)
+    }
+
+    .menu {
+        z-index: 9999;
+        background: none; 
+        padding-right: 60%;
+    }
+
+    .logo {
+        a {
+            font-family: var(--pacifico);
+            background: linear-gradient(to right, var(--electric-blue), var(--golden-yellow), var(--electric-carrot));
+            background-size: 200% 200%;
+            animation: rainbow 2s ease-in-out infinite;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: white;
+            display: block;
+            transition: color .9s ease-in-out;
+            font-size: 1.5em;
+            width: auto;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: rgba(0, 0, 0, 0);
+        }
+    }
+
+    .actionButtons {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 3em;
+        gap: 5%
+    }
+
+    .menuBtn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        padding: 0;
+        box-shadow: none;
+
+        svg {
+            background: none;
+        }
+
+        .line {
+            fill: none;
+            stroke: var(--golden-yellow);
+            stroke-width: 6;
+            transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .line1 {
+            stroke-dasharray: 60 207;
+            stroke-width: 6;
+        }
+
+        .line2 {
+            stroke-dasharray: 60 60;
+            stroke-width: 6;
+        }
+
+        .line3 {
+            stroke-dasharray: 60 207;
+            stroke-width: 6;
+        }
+    }
+
+    .opened .line1 {
+        stroke: black;
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+    }
+
+    .opened .line2 {
+        stroke: var(--electric-carrot);
+        stroke-dasharray: 1 60;
+        stroke-dashoffset: -30;
+        stroke-width: 6;
+    }
+
+    .opened .line3 {
+        stroke: black;
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+    }
+}
+
+:host ::ng-deep app-menu {
+    position: fixed;
+    top: 0;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: left
+    }
+
+    50% {
+        background-position: right
+    }
+
+    100% {
+        background-position: left
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .actionButtons {
+        gap: 15%;
+
+        i:nth-child(2),
+        i:nth-child(3) {
+            display: none;
+        }
+    }
+}

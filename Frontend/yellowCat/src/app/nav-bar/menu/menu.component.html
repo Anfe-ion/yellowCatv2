@@ -1,0 +1,104 @@
+<ul class="menu">
+    <div>
+        <i class="bi bi-sun"></i>
+    </div>
+    <div>
+        <li (click)="spanishSwitch()"><i class="bi bi-arrow-left-right"></i> ES</li>
+    </div>
+
+    <div>
+        <li><a (click)="homeRed()"><i class="bi bi-house-door"></i> Home</a></li>
+        <ul (click)="toggleMenu()"><a href="#"><i class="bi bi-lightning-charge-fill"></i> e-Bikes <i
+                    class="bi bi-arrow-down-short"></i></a>
+            <ul class="submenu">
+                <li><a #submenu href="#">Road</a></li>
+                <li><a href="#">Gravel</a></li>
+                <li><a href="#">City</a></li>
+                <li><a href="#">Mountain</a></li>
+                <li><a href="#">All e-bikes</a></li>
+            </ul>
+        </ul>
+        <li><a href="#"><i class="bi bi-backpack2"></i> Accessories <i class="bi bi-arrow-down-short"></i></a>
+            <ul><a href="">Helmets</a></ul>
+            <ul><a href="">Parts</a></ul>
+            <ul><a href="">Clothes</a></ul>
+            <ul><a href="">All Accessories</a></ul>
+        </li>
+        <li><a href="#"><i class="bi bi-cart4"></i> Cart</a></li>
+        <li><a href="#"><i class="bi bi-percent"></i> Discounts</a></li>
+        <li><a href="https://registrobicibogota.movilidadbogota.gov.co/" rel="nofollow" target="_blank"><i class="bi bi-bicycle"></i> Register your e-Bike</a></li>
+    </div>
+
+    <div>
+        <!-- <li><a href="#"><i class="bi bi-person-heart"></i> My Profile</a></li> -->
+        <li><a href="#"><i class="bi bi-person-check"></i> Sign In</a></li>
+        <!-- <li><a href="#"><i class="bi bi-person-x"></i> Sign Out</a></li> -->
+        <li><a href="#"><i class="bi bi-person-add"></i> Sign Up</a></li>
+    </div>
+
+    <div>
+        <li><a href="#"><i class="bi bi-at"></i> Contact</a></li>
+        <li><a href="#"><i class="bi bi-info-circle"></i> FAQs</a></li>
+        <li><a href="#"><i class="bi bi-box2-heart"></i> Warranty</a></li>
+    </div>
+
+
+    <div>
+        <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+        <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+    </div>
+</ul>
+
+@if (spanish){
+<ul class="menu">
+    <div>
+        <i class="bi bi-moon-stars"></i>
+    </div>
+    <div>
+        <li (click)="spanishSwitch()"><i class="bi bi-arrow-left-right"></i> EN</li>
+    </div>
+
+    <div>
+        <li><a (click)="homeRed()"><i class="bi bi-house-door"></i> Inicio</a></li>
+        <li><i class="bi bi-lightning-charge-fill"></i> e-Bikes <i class="bi bi-arrow-down-short"></i>
+            <ul><a href="">Montaña</a></ul>
+            <ul><a href="">Ciudad</a></ul>
+            <ul><a href="">Ruta</a></ul>
+            <ul><a href="">Gravel</a></ul>
+            <ul><a href="">Todas las e-bikes</a></ul>
+        </li>
+        <li><a href="/all-e-bikes"><i class="bi bi-backpack2"></i> Accesorios <i class="bi bi-arrow-down-short"></i></a>
+            <ul><a href="">Cascos</a></ul>
+            <ul><a href="">Respuestos</a></ul>
+            <ul><a href="">Ropa</a></ul>
+            <ul><a href="">Todos los Accesorios</a></ul>
+        </li>
+        <li><a href="#"><i class="bi bi-cart4"></i> Carrito</a></li>
+        <li><a href="#"><i class="bi bi-percent"></i> Descuentos</a></li>
+        <li><a href="https://registrobicibogota.movilidadbogota.gov.co/" rel="nofollow" target="_blank"><i
+                    class="bi bi-bicycle"></i> Registra tu e-bici</a></li>
+    </div>
+
+    <div>
+        <!-- <li><a href="#"><i class="bi bi-person-heart"></i> Mi perfil</a></li> -->
+        <li><a href="#"><i class="bi bi-person-check"></i> Entrar a mi cuenta</a></li>
+        <!-- <li><a href="#"><i class="bi bi-person-x"></i> Salir de mi cuenta</a></li> -->
+        <li><a href="#"><i class="bi bi-person-add"></i> Registrarse</a></li>
+    </div>
+
+    <div>
+        <li><a href="#"><i class="bi bi-at"></i> Contacto</a></li>
+        <li><a href="#"><i class="bi bi-info-circle"></i> PQRS</a></li>
+        <li><a href="#"><i class="bi bi-box2-heart"></i> Garantía</a></li>
+    </div>
+
+
+    <div>
+        <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+        <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+    </div>
+</ul>
+
+}

@@ -1,0 +1,21 @@
+<div class="body">
+  <h1>All yellowCat e-bikes</h1>
+
+  <div class="products">
+    @for ( product of dataProducts; track product.nombre; ){
+
+    <div class="card">
+      <div class="imgBox">
+        <img class="image" [src]="'images/bikes/' + product.nombre + '.webp'" alt="Image {{product.nombre}}">        
+      </div>
+
+      <div class="contentBox">
+        <h3>{{product.nombre}}</h3>
+        <h2 class="price">${{product.precio}}</h2>
+        <a href="/#" class="buy">Buy Now!</a>
+      </div>
+    </div>
+
+    }
+  </div>
+</div>

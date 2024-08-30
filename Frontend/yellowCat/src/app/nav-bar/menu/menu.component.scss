@@ -1,0 +1,83 @@
+.menu {
+    position: fixed;
+    z-index: 9999999;
+    background-color: var(--golden-yellow);
+    width: 30%;
+    padding: 4.2em 1.4em 1.3em 5em;
+    height: 100vh;
+    margin-top: -10px;
+    pointer-events: auto;
+
+    li:hover {
+        color: white;
+    }
+
+    div {
+        padding-bottom: 1.5em;
+        line-height: 2.5;
+    }
+
+    div ul.submenu {
+        padding-left: 1.5em;
+        font-size: 0.8em;
+        border: 1px solid red;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+
+    }
+    .submenu-visible {
+        padding-left: 3000px;
+    }
+    
+
+    div:nth-child(1) {
+        font-size: 1.45em;
+        font-weight: 800;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 0.5em;
+        margin-top: -2.5em;
+
+        i {
+            cursor: pointer;
+
+            :hover {
+                color: var(--electric-carrot)
+            }
+        }
+    }
+
+    div:nth-child(2) {
+        color: var(--quartz);
+        font-size: 0.9em;
+        font-weight: 800;
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    div:nth-child(3) {
+        margin-top: -3.7em;
+    }
+
+    div:last-child {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        justify-content: center;
+        align-items: flex-end;
+        padding-top: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .menu {
+        width: 65%;
+
+        div:last-child {
+            padding-top: 0%;
+        }
+    }
+}

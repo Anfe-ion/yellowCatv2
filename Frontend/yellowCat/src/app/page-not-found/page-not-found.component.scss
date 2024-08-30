@@ -1,0 +1,24 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 10em !important;
+        padding: 0em !important;
+        background: linear-gradient(to left, var(--electric-blue), var(--golden-yellow), var(--electric-carrot));
+        background-size: 200% 200%;
+        animation: rainbow 5s ease-in-out infinite;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba(0, 0, 0, 0);
+    }
+
+    img {
+        max-width: 30%;
+        margin: 2em;
+    }
+}

@@ -1,0 +1,11 @@
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\bin\Debug\net8.0\yellowCat.Model.deps.json
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\bin\Debug\net8.0\yellowCat.Model.dll
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\bin\Debug\net8.0\yellowCat.Model.pdb
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\obj\Debug\net8.0\yellowCat.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\obj\Debug\net8.0\yellowCat.Model.AssemblyInfoInputs.cache
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\obj\Debug\net8.0\yellowCat.Model.AssemblyInfo.cs
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\obj\Debug\net8.0\yellowCat.Model.csproj.CoreCompileInputs.cache
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\obj\Debug\net8.0\yellowCat.Model.dll
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\obj\Debug\net8.0\refint\yellowCat.Model.dll
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\obj\Debug\net8.0\yellowCat.Model.pdb
+C:\Users\desarrollador.sena\Desktop\yellowCatProject\API\yellowCat.Model\obj\Debug\net8.0\ref\yellowCat.Model.dll
