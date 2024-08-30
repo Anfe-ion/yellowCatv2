@@ -19,7 +19,7 @@ export class NavBarComponent {
   }
 
   loginRed(){
-    this.router.navigate(['/login'])
+    this.router.navigate(['users/login'])
   }
 
   seeMenu(){
