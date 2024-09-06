@@ -8,7 +8,7 @@
 
     <div>
         <li><a (click)="homeRed()"><i class="bi bi-house-door"></i> Home</a></li>
-        <ul><a (click)="toggleMenu()"><i class="bi bi-lightning-charge-fill"></i> e-Bikes <i
+        <li><a (click)="toggleMenu()"><i class="bi bi-lightning-charge-fill"></i> e-Bikes <i
                     class="bi bi-arrow-down-short"></i></a>
             <ul class="submenu">
                 <li><a (click)="roadRed()">Road</a></li>
@@ -17,12 +17,14 @@
                 <li><a (click)="mountainRed()">Mountain</a></li>
                 <li><a (click)="allEbikesRed()">All e-bikes</a></li>
             </ul>
-        </ul>
+        </li>
         <li><a href="#"><i class="bi bi-backpack2"></i> Accessories <i class="bi bi-arrow-down-short"></i></a>
-            <ul><a (click)="helmetsRed()">Helmets</a></ul>
-            <ul><a (click)="partsRed()">Parts</a></ul>
-            <ul><a (click)="clothesRed()">Clothes</a></ul>
-            <ul><a (click)="allAccessoriesRed()">All Accessories</a></ul>
+            <ul class="submenu">
+                <li><a (click)="helmetsRed()">Helmets</a></li>
+                <li><a (click)="partsRed()">Parts</a></li>
+                <li><a (click)="clothesRed()">Clothes</a></li>
+                <li><a (click)="allAccessoriesRed()">All Accessories</a></li>
+            </ul>
         </li>
         <li><a (click)="cartRed()"><i class="bi bi-cart4"></i> Cart</a></li>
         <li><a (click)="discountsRed()"><i class="bi bi-percent"></i> Discounts</a></li>

@@ -1,1 +1,56 @@
-<p>register works!</p>
+<div class="body">
+    <form action="">
+        <h1>Sign Up in yellowCat now!</h1>
+        <label for="name">Name(s):</label>
+        <input type="text" placeholder="Your name here" autocomplete="off">
+
+        <label for="last-name">Last name(s)</label>
+        <input type="text" placeholder="Your last name" autocomplete="off">
+
+        <label for="email">E-mail</label>
+        <input type="email" placeholder="Your e-mail" autocomplete="off">
+
+        <label for="country">Country</label>
+        <select>
+            <option value="">Select your country</option>
+            @for(country of countryData; track country.name;){
+            <option value="{{country.name}}">{{country.name}}</option>
+            }
+        </select>
+
+        <label for="city">City</label>
+        <select>
+            <option value="">Select your city</option>
+            @for(city of cityData; track city.city;){
+            <option value="{{city.city}}">{{city.city}}</option>
+            }
+        </select>
+
+        <label for="phone">Phone</label>
+        <select>
+            <option value=""></option>
+            @for(country of countryData; track country.callingCodes){
+                <option value="">+ {{country.callingCodes}}</option>
+            }
+        </select>
+
+        <input type="tel" placeholder="Your phone number" autocomplete="off">
+
+
+        <label for="username">Username</label>
+        <input type="text" placeholder="Type an username that you want" autocomplete="off">
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Type a password" autocomplete="off">
+
+        <label for="password-confirmation">Confirm your password</label>
+        <input type="password" placeholder="Type, again, your password" autocomplete="off">
+
+        <div class="conditions">
+            <div><input type="checkbox"></div>
+            <div><span>I accept <a href="#">Terms & Conditions</a></span></div>
+        </div>
+
+        <button>Sign Up</button>
+    </form>
+</div>

@@ -10,7 +10,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1%;
     align-items: center;
-    justify-self: center;
     max-height: 55%;
 
     i {
@@ -25,9 +24,7 @@
     }
 
     .menu {
-        z-index: 9999;
-        background: none; 
-        padding-right: 60%;
+        background: none;
     }
 
     .logo {
@@ -57,7 +54,7 @@
     .actionButtons {
         display: flex;
         justify-content: flex-end;
-        margin-right: 3em;
+        margin-right: 1.6em;
         gap: 5%
     }
 
@@ -65,9 +62,10 @@
         background-color: transparent;
         border: none;
         cursor: pointer;
-        display: flex;
-        padding: 0;
+        padding-left: 1em;
         box-shadow: none;
+        position: relative;
+        z-index: 9999;
 
         svg {
             background: none;

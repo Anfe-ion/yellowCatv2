@@ -1,0 +1,27 @@
+.body{
+    max-width: 90%;
+    width: 70%;
+    margin: 0 auto;
+    h1{
+        padding-bottom: 0.2em !important;
+    }
+    h2{
+        font-weight: 800;
+        padding: 2em 0 0.5em 0;
+    }
+    p{
+        text-align: justify;
+    }
+    b{
+        font-weight: 600;
+    }
+    a{
+        text-decoration: underline;
+        color: var(--electric-carrot)
+    }
+
+    div{
+        display: flex;
+        margin-top: 2em;
+    }
+}

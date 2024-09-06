@@ -1,11 +1,15 @@
 .menu {
     position: fixed;
     background-color: var(--golden-yellow);
-    width: 30%;
-    padding: 4.2em 1.4em 1.3em 5em;
+    min-width: 40%;
+    padding: 4.5em 1.6em 1.3em 1.6em;
     height: 100vh;
-    margin-top: -10px;
     pointer-events: auto;
+    margin-top: -2px;
+
+    li, ul, i{
+        cursor: pointer;
+    }
 
     li:hover {
         color: white;
@@ -17,17 +21,12 @@
     }
 
     div ul.submenu {
-        padding-left: 1.5em;
+        display: none;
+        padding-left: 2.5em;
         font-size: 0.8em;
-        border: 1px solid red;
         overflow: hidden;
         transition: max-height 0.3s ease-out;
-
     }
-    .submenu-visible {
-        padding-left: 3000px;
-    }
-    
 
     div:nth-child(1) {
         font-size: 1.45em;
@@ -35,11 +34,9 @@
         display: flex;
         justify-content: flex-end;
         padding-bottom: 0.5em;
-        margin-top: -2.5em;
+        margin-top: -3.1em;
 
         i {
-            cursor: pointer;
-
             :hover {
                 color: var(--electric-carrot)
             }
@@ -53,7 +50,7 @@
         display: flex;
         justify-content: flex-end;
         cursor: pointer;
-        z-index: 999;
+
     }
 
     div:nth-child(3) {
@@ -66,7 +63,7 @@
         gap: 1em;
         justify-content: center;
         align-items: flex-end;
-        padding-top: 50%;
+        padding-top: 20%;
     }
 
 }

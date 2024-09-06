@@ -25,6 +25,6 @@ export class UsersComponent {
   }
 
   registerRedirection(){
-    this.router.navigate(['/register']);
+    this.router.navigate(['users/register']);
   }
 }

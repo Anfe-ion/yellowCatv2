@@ -20,7 +20,8 @@ import { MountainComponent } from './e-bikes/mountain/mountain.component';
 import { ClothesComponent } from './accessories/clothes/clothes.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent, pathMatch: 'full' },
 
     {
         path: 'ebikes',
