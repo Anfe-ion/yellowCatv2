@@ -1,0 +1,42 @@
+.body {
+    .slider {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 3em 3em 3em 3em;
+        background-color: var(--electric-carrot);
+
+        .button{
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: -1em;
+            button {
+                border: none;
+                background-color: var(--ghost-white);
+                color: var(--jet);
+                border-radius: 2em;
+                text-align: center;
+                padding: 0;
+                min-width: 0;
+                box-shadow: none;
+                height: 2em;
+                width: 2em;
+                margin: 0 auto;
+                button:hover{
+                    background: none;
+                }
+            }
+        }
+
+        div {
+            height: calc((100vw - 6em) / 2);
+
+            img {
+                width: 100%;
+                height: 100%;
+                /* opacity: 60%; */
+            }
+        }
+    }
+}

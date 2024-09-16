@@ -1,0 +1,53 @@
+.body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1em;
+    gap: 10%;
+    height: 70vh;
+}
+
+.log-in form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.social-log {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+
+    button {
+        border: 1px solid rgba(0, 0, 0, 0.089);
+        border-radius: 1em;
+        background-color: rgba(0, 0, 0, 0.02);
+        width: 80%;
+        margin: 0 auto;
+        padding: 1em;
+        text-align: center;
+        line-height: 0;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: var(--quartz);
+        color: white
+    }
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+button {
+    margin: 0.5em 0 2em 0;
+}
