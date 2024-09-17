@@ -1,69 +1,77 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-
+import { Component, OnInit, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-
+export class HomeComponent implements OnInit {
   currentIndex: number = 0;
   totalImages: number = 4;
   animateLeft: boolean = false;
   animateRight: boolean = false;
+  
+  constructor(private zone: NgZone) {}
 
+  ngOnInit() {
+    // Iniciamos el cambio automático de imágenes fuera del contexto de Angular
+    this.startAutoSlide();
+  }
+
+  // Método para iniciar el slider automático
+  startAutoSlide() {
+    // Ejecutamos el intervalo fuera del ciclo de detección de cambios de Angular
+    this.zone.runOutsideAngular(() => {
+      setInterval(() => {
+        // Volvemos al contexto de Angular solo cuando necesitamos actualizar la vista
+        this.zone.run(() => {
+          this.nextSlide();
+        });
+      }, 7000); // Cambio automático cada 3 segundos
+    });
+  }
+
+  // Cambiar a la siguiente imagen
   nextSlide() {
-    if (this.currentIndex === this.totalImages - 1) {
-      this.triggerAnimations()
-      setTimeout(() => {
-        this.currentIndex = 0;
-      }, 500);
-    } else {
-      this.triggerAnimations()
-      setTimeout(() => {
-        this.currentIndex++;
-      }, 500);
-    }
+    this.currentIndex = (this.currentIndex + 1) % this.totalImages;
+    this.triggerAnimations();
   }
 
-
+  // Cambiar a la imagen anterior
   prevSlide() {
-    this.triggerAnimations()
-    if (this.currentIndex === 0) {
-      setTimeout(() => {
-        this.currentIndex = this.totalImages - 1;
-      }, 500);
-    } else {
-      this.triggerAnimations()
-      setTimeout(() => {
-        this.currentIndex--;
-      }, 500);
-    }
+    this.currentIndex =
+      this.currentIndex === 0 ? this.totalImages - 1 : this.currentIndex - 1;
+    this.triggerAnimations();
   }
 
+  // Método para activar las animaciones
   triggerAnimations() {
     this.animateLeft = true;
     this.animateRight = true;
 
+    // Reiniciar las animaciones después de que terminen
     setTimeout(() => {
       this.animateLeft = false;
       this.animateRight = false;
-    }, 500);
+    }, 500); // Ajusta el tiempo para que coincida con la duración de la animación
   }
 
+  // Método para asignar las clases de animación de acuerdo con el índice
   getSliderClass() {
     switch (this.currentIndex) {
-      case 0: return 'color1';
-      case 1: return 'color2';
-      case 2: return 'color3';
-      case 3: return 'color4';
-      default: return '';
+      case 0:
+        return 'color1';
+      case 1:
+        return 'color2';
+      case 2:
+        return 'color3';
+      case 3:
+        return 'color4';
+      default:
+        return '';
     }
   }
-
-
 }
