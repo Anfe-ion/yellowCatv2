@@ -4,43 +4,62 @@
             <button (click)="prevSlide()"><i class="bi bi-arrow-left-short"></i></button>
         </div>
         <div class="left">
-            @if(currentIndex === 0){            
-            <img src="images/slider/city/city-bike.png" alt=""
-            [ngClass]="{'slide-down': animateLeft}">
+            @if(currentIndex === 0){
+            <img src="images/slider/city/city-bike.png" alt="" [ngClass]="{'slide-down': animateLeft}">
             }
             @if(currentIndex === 1){
-            <img src="images/slider/road/road-bike.png" alt=""
-            [ngClass]="{'slide-down': animateLeft}">
+            <img src="images/slider/road/road-bike.png" alt="" [ngClass]="{'slide-down': animateLeft}">
             }
             @if(currentIndex === 2){
-            <img src="images/slider/mountain/mountain-bike.png" alt=""
-            [ngClass]="{'slide-down': animateLeft}">
+            <img src="images/slider/mountain/mountain-bike.png" alt="" [ngClass]="{'slide-down': animateLeft}">
             }
             @if(currentIndex === 3){
-            <img src="images/slider/gravel/gravel-bike.png" alt=""
-            [ngClass]="{'slide-down': animateLeft}">
+            <img src="images/slider/gravel/gravel-bike.png" alt="" [ngClass]="{'slide-down': animateLeft}">
             }
         </div>
         <div class="right">
             @if(currentIndex === 0){
             <img src="images/slider/city/city-adjetive.png" alt=""
-            [ngClass]="{'slide-up': animateRight, 'slide-down': animateRight}">
+                [ngClass]="{'slide-up': animateRight, 'slide-down': animateRight}">
             }
             @if(currentIndex === 1){
             <img src="images/slider/road/road-adjetive.png" alt=""
-            [ngClass]="{'slide-up': animateRight, 'slide-down': animateRight}">
+                [ngClass]="{'slide-up': animateRight, 'slide-down': animateRight}">
             }
             @if(currentIndex === 2){
             <img src="images/slider/mountain/mountain-adjetive.png" alt=""
-            [ngClass]="{'slide-up': animateRight, 'slide-down': animateRight}">
+                [ngClass]="{'slide-up': animateRight, 'slide-down': animateRight}">
             }
             @if(currentIndex === 3){
             <img src="images/slider/gravel/gravel-adjetive.png" alt=""
-            [ngClass]="{'slide-up': animateRight, 'slide-down': animateRight}">
+                [ngClass]="{'slide-up': animateRight, 'slide-down': animateRight}">
             }
         </div>
         <div class="button">
             <button (click)="nextSlide()"><i class="bi bi-arrow-right-short"></i></button>
         </div>
     </div>
+
+    <div class="top-sales">
+        <h2>The most popular e-bikes</h2>
+        <div class="products">
+            @for ( product of dataProducts; track product.nombre; ){
+
+            <div class="card">
+                <div class="imgBox">
+                    <img class="image" [src]="'images/bikes/' + product.nombre + '.webp'"
+                        alt="Image {{product.nombre}}">
+                </div>
+
+                <div class="contentBox">
+                    <h3>{{product.nombre}}</h3>
+                    <h2 class="price">${{product.precio}}</h2>
+                    <a href="/#" class="buy">Buy Now!</a>
+                </div>
+            </div>
+
+            }
+        </div>
+    </div>
+    <app-carrousel></app-carrousel>
 </div>

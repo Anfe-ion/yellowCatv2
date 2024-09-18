@@ -4,7 +4,8 @@ import { NavBarComponent } from './pages/constant-pages/nav-bar/nav-bar.componen
 import { MenuComponent } from './pages/constant-pages/nav-bar/menu/menu.component';
 import { FooterComponent } from './pages/constant-pages/footer/footer.component';
 import { EBikesComponent } from './pages/products/e-bikes/e-bikes.component';
-
+import { HomeComponent } from './pages/home/home.component';
+import { CarrouselComponent } from './pages/home/carrousel/carrousel.component';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,9 @@ import { EBikesComponent } from './pages/products/e-bikes/e-bikes.component';
     RouterOutlet,
     NavBarComponent,
     MenuComponent,
-    /* EBikesComponent, */
+    EBikesComponent,
+    HomeComponent,
+    CarrouselComponent,
     FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

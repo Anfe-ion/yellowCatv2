@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, NgZone } from '@angular/core';
+import { ProductsService } from '../../services/products.service';
+import { CarrouselComponent } from "./carrousel/carrousel.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CarrouselComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -13,12 +15,21 @@ export class HomeComponent implements OnInit {
   totalImages: number = 4;
   animateLeft: boolean = false;
   animateRight: boolean = false;
-  
-  constructor(private zone: NgZone) {}
+  dataProducts: any[] = [];
+    
+  constructor(private zone: NgZone, private bikesService: ProductsService) {}
 
   ngOnInit() {
     // Iniciamos el cambio automático de imágenes fuera del contexto de Angular
     this.startAutoSlide();
+    this.getData()    
+  }
+
+  getData(){
+    this.bikesService.getData().subscribe(data=>{
+      //Top 3 by sales
+      this.dataProducts = data.sort((a, b) => b.Ventas - a.Ventas).slice(0, 3)
+    })
   }
 
   // Método para iniciar el slider automático
