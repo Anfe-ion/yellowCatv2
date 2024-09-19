@@ -5,7 +5,7 @@ import { MenuComponent } from './pages/constant-pages/nav-bar/menu/menu.componen
 import { FooterComponent } from './pages/constant-pages/footer/footer.component';
 import { EBikesComponent } from './pages/products/e-bikes/e-bikes.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CarrouselComponent } from './pages/home/carrousel/carrousel.component';
+import { CarrouselComponent } from './pages/home/bottom-carrousel/carrousel.component';
 
 @Component({
   selector: 'app-root',

@@ -19,11 +19,13 @@ import { ContactComponent } from './pages/constant-pages/politics/contact/contac
 import { FAQsComponent } from './pages/constant-pages/politics/faqs/faqs.component';
 import { WarrantyComponent } from './pages/constant-pages/politics/warranty/warranty.component';
 import { PageNotFoundComponent } from './pages/constant-pages/page-not-found/page-not-found.component';
+import { MainCarrouselComponent } from './pages/home/main-carrousel/main-carrousel.component';
 
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent, pathMatch: 'full' },
+    {path: 'test', component: MainCarrouselComponent},
 
     {
         path: 'ebikes',

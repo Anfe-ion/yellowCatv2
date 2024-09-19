@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, NgZone } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
-import { CarrouselComponent } from "./carrousel/carrousel.component";
+import { CarrouselComponent } from "./bottom-carrousel/carrousel.component";
+import { MainCarrouselComponent } from "./main-carrousel/main-carrousel.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, CarrouselComponent],
+  imports: [CommonModule, CarrouselComponent, MainCarrouselComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
